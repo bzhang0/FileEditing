@@ -28,8 +28,6 @@ public class ArrayTest {
             balance.add(inputNum);
         }
 
-        PrintStream output = new PrintStream(new File(outFile));
-
         System.out.println(name.toString());
         System.out.println(balance.toString());
 
@@ -62,8 +60,13 @@ public class ArrayTest {
         System.out.print("How much to bet? ");
         int changeBalance = console.nextInt();
 
-        if (changeBalance > balance.get(inputIndex)) {
-            System.out.println("That's over your bet amount! Please try again!");
+        while (changeBalance > balance.get(inputIndex) || changeBalance <= 0) {
+            if (changeBalance <= 0) {
+                System.out.println("Please bet above zero!");
+            } else {
+                System.out.println("That's over your bet amount! Please try again!");
+
+            }
             System.out.print("How much to bet? ");
             changeBalance = console.nextInt();
         }
@@ -90,6 +93,8 @@ public class ArrayTest {
         System.out.println("Balance: " + balance.get(name.indexOf(inputName)));
 
         System.out.println();
+
+        PrintStream output = new PrintStream(new File(outFile));
 
         for (int i = 0; i < name.size(); i++) {
             output.println(name.get(i) + " " + balance.get(i));

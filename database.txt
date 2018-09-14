@@ -1,4 +1,4 @@
-Dog 34
+Dog 129
 Cat 9
 Apple 13
 Orange 15
