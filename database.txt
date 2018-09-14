@@ -1,0 +1,8 @@
+Dog 34
+Cat 9
+Apple 13
+Orange 15
+Ben 10
+Jason 10
+Mom 10
+Dad 15
