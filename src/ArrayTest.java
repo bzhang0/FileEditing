@@ -11,8 +11,6 @@ public class ArrayTest {
         String inputName = "";
         int inputIndex = 0;
 
-        Random rand = new Random();
-
         Scanner console = new Scanner(System.in);
 
         String inFile = "database.txt";
@@ -71,18 +69,18 @@ public class ArrayTest {
             changeBalance = console.nextInt();
         }
 
-        int roll = rand.nextInt(100) + 1;
+        int roll = new Random().nextInt(100) + 1;
+        System.out.println("You rolled " + roll + "!");
         if (roll > BETTING_ODDS) {
             storeBalance += changeBalance;
-            System.out.println("You rolled " + roll + "!");
             System.out.println("You won " + changeBalance + "!");
-            System.out.println("Your balance is now: " + storeBalance);
         } else {
             storeBalance -= changeBalance;
-            System.out.println("You rolled " + roll + "!");
             System.out.println("You lost " + changeBalance + "!");
-            System.out.println("Your balance is now: " + storeBalance);
         }
+        System.out.println("Your balance is now: " + storeBalance);
+        // END BET
+
 
         balance.remove(inputIndex);
         balance.add(inputIndex, storeBalance);

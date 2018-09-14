@@ -4,5 +4,5 @@ Apple 13
 Orange 15
 Ben 10
 Jason 10
-Mom 10
+Mom 23
 Dad 15
